@@ -1,0 +1,29 @@
+Instructions:
+-Spark jobs were executed in Cloudera. 
+All the input files are moved from local file system to the input folder in Hadoop file system.
+Command: Hadoop fs -put /<local file path>/ /<input HDFS FilePath>/
+
+install required packages 
+-To install the numpy package to use numpy arrays, transpose and inverse functions. On the command terminal use following command
+Command: sudo yum install numpy
+
+-To run ipython notebook use the following commands for mac os
+Command: sudo yum install python
+	 sudo yum install pyzmq
+	 sudo yum install Jinja2
+	 sudo yum install tornado==2.1.1
+	 sudo yum install ipython==1.2.1
+
+Commands:for windows as mentioned in ipython file 
+	 sudo pip install pyzmq
+	 sudo pip install Jinja2
+	 sudo pip install tornado==2.1.1
+	 sudo pip install ipython==1.2.1
+
+-To open ipython notebook
+ install findspark package
+Commands: sudo pip install findspark
+
+Command:ipython newnotebook	-To run python file on spark
+Command: spark-submit <python_filename> <input_filepath>
+	 spark-submit linreg.py <input HDFS Filepath>
